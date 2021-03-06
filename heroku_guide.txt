@@ -1,0 +1,17 @@
+Heroku deploy guide:
+
+heroku container:login
+
+heroku create yourawesomeapp
+
+heroku container:push web --app mynewdockerapp123
+
+heroku container:release web --app mynewdockerapp123
+
+
+
+check out https://mynewdockerapp123.herokuapp.com
+
+
+For Streamlit apps deployed as container on heroku change the command line in docker file
+CMD streamlit run app.py --server.port $PORT
